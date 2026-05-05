@@ -1,0 +1,230 @@
+{
+  "admin": {
+    "password": "forgeadmin"
+  },
+  "brand": {
+    "name": "Forge Digital",
+    "tagline": "Better websites, clearer online presence, and smarter follow-up for local businesses."
+  },
+  "cta": {
+    "primary": "Book a Free Call"
+  },
+  "nav": [
+    { "label": "Services", "href": "#services" },
+    { "label": "How It Works", "href": "#process" },
+    { "label": "Example", "href": "#example" },
+    { "label": "Options", "href": "#packages" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "sections": {
+    "services": true,
+    "howItWorks": true,
+    "example": true,
+    "packages": true,
+    "proof": true,
+    "faq": true,
+    "contact": true
+  },
+  "photos": {
+    "hero": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=1200&q=82",
+    "example": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=82",
+    "proof": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=82"
+  },
+  "hero": {
+    "eyebrow": "Digital help for busy local businesses",
+    "headline": "A stronger online presence for businesses too busy to fix it themselves.",
+    "subheadline": "Forge Digital helps local businesses improve their website, make it easier for customers to reach them, and follow up with inquiries without adding more work to the day.",
+    "primaryButton": "Book a free call",
+    "secondaryButton": "See how we help",
+    "trustBullets": [
+      "Clear recommendations",
+      "Practical improvements",
+      "Built around your business"
+    ],
+    "photoAlt": "Small business owner speaking with a customer",
+    "photoCardTitle": "Built for real operators",
+    "photoCardText": "For restaurants, service businesses, agents, shops, and small firms that need practical digital help without jargon.",
+    "photoTags": ["Website refresh", "Inquiry setup", "Follow-up support"]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Simple improvements that make your business easier to find, trust, and contact.",
+    "intro": "Most local businesses do not need a complicated digital overhaul. They need the right few pieces cleaned up, connected, and maintained.",
+    "cards": [
+      {
+        "icon": "website",
+        "title": "Website Design & Refresh",
+        "description": "A polished site that explains what you do, builds trust quickly, works on mobile, and gives visitors a clear next step.",
+        "footer": "Clear pages, better structure, stronger first impression"
+      },
+      {
+        "icon": "contact",
+        "title": "Lead Capture & Contact Setup",
+        "description": "Forms, booking links, calls, emails, and inquiry routing set up so interested customers can reach you without friction.",
+        "footer": "Contact forms, booking, reminders, routing"
+      },
+      {
+        "icon": "support",
+        "title": "Ongoing Support & Smart Automation",
+        "description": "Practical support for updates, follow-up, review requests, simple reporting, and small automations that save time.",
+        "footer": "Maintenance, follow-up, practical time savers"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "A straightforward process that respects your time.",
+    "text": "We keep the work focused, practical, and easy to understand, so you can get real improvements without becoming a web or software expert.",
+    "steps": [
+      {
+        "icon": "learn",
+        "number": "01",
+        "title": "Learn about your business",
+        "body": "We look at your current website, customer journey, contact process, and the places where opportunities may be slipping through."
+      },
+      {
+        "icon": "improve",
+        "number": "02",
+        "title": "Improve the parts that matter most",
+        "body": "We focus on the changes most likely to help: clearer pages, better calls to action, easier inquiry paths, and useful follow-up."
+      },
+      {
+        "icon": "launch",
+        "number": "03",
+        "title": "Launch and support",
+        "body": "We get the improvements live, make sure they work on real devices, and stay available for updates as your business changes."
+      }
+    ]
+  },
+  "example": {
+    "eyebrow": "A simple example",
+    "title": "What this can look like for a busy local business.",
+    "body": "Instead of chasing a dozen disconnected tools, we help create a clearer path from someone discovering your business to actually getting in touch.",
+    "photoAlt": "Team members reviewing a business plan together",
+    "points": [
+      "A cleaner homepage that explains the offer in plain language",
+      "A visible contact path for calls, forms, and appointments",
+      "A simple follow-up message so new inquiries are not forgotten",
+      "A maintainable setup the owner can understand"
+    ],
+    "before": [
+      "Website feels dated",
+      "Contact form is hard to find",
+      "Inquiries sit in an inbox",
+      "Owner handles every small update"
+    ],
+    "after": [
+      "Clearer first impression",
+      "Easier customer contact",
+      "Follow-up is more consistent",
+      "Support is available when needed"
+    ]
+  },
+  "packages": {
+    "eyebrow": "Ways we can help",
+    "title": "Start with the piece that would make the biggest difference.",
+    "text": "No pressure to buy a huge package. We can begin with a focused improvement and expand only when it makes sense.",
+    "cards": [
+      {
+        "label": "Good first step",
+        "title": "Website Refresh",
+        "description": "For businesses with an existing site that needs to look more current, read more clearly, and guide customers to the next step.",
+        "features": [
+          "Homepage or landing page refresh",
+          "Mobile layout improvements",
+          "Clear contact sections",
+          "Basic search and analytics setup"
+        ],
+        "button": "Talk about a refresh"
+      },
+      {
+        "label": "Most common",
+        "title": "Website + Inquiry Setup",
+        "description": "For businesses that want a stronger website plus a better way to capture, route, and respond to new opportunities.",
+        "features": [
+          "New or refreshed website",
+          "Contact and booking setup",
+          "Inquiry routing",
+          "Simple follow-up support"
+        ],
+        "button": "Improve inquiries"
+      },
+      {
+        "label": "For ongoing help",
+        "title": "Ongoing Support",
+        "description": "For owners who want a reliable digital partner for updates, small improvements, and practical tools that save time.",
+        "features": [
+          "Website updates",
+          "Monthly improvement planning",
+          "Review and follow-up workflows",
+          "Light reporting and maintenance"
+        ],
+        "button": "Discuss support"
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "Why it matters",
+    "title": "A more professional online presence can make everyday business easier.",
+    "photoAlt": "Small business team speaking in a warm office setting",
+    "items": [
+      {
+        "icon": "shop",
+        "title": "Look established",
+        "text": "Customers get a clearer, more confident first impression."
+      },
+      {
+        "icon": "contact",
+        "title": "Be easier to reach",
+        "text": "The next step is obvious whether someone wants to call, book, or ask a question."
+      },
+      {
+        "icon": "time",
+        "title": "Save owner time",
+        "text": "Small systems handle repeatable tasks so fewer things depend on memory."
+      },
+      {
+        "icon": "firm",
+        "title": "Support real growth",
+        "text": "The setup stays simple enough to use, maintain, and improve."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "A few common questions",
+    "items": [
+      {
+        "question": "Do I need to know exactly what I want?",
+        "answer": "No. A big part of the first call is helping identify what would make the most practical difference for your business."
+      },
+      {
+        "question": "Can you work with my existing website?",
+        "answer": "Usually, yes. If your current site has a solid foundation, we can refresh and improve it instead of rebuilding everything."
+      },
+      {
+        "question": "Do you only build websites?",
+        "answer": "Websites are often the starting point, but we can also help with inquiry forms, follow-up, booking links, review requests, and simple operational tools."
+      },
+      {
+        "question": "Will this be complicated to manage?",
+        "answer": "The goal is the opposite. We keep the setup understandable and can provide ongoing support when you do not want to manage it yourself."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s talk about what your business needs.",
+    "text": "Tell us what feels outdated, slow, or harder than it should be. We will help you find the simplest useful next step.",
+    "email": "hello@forgedigital.com",
+    "phone": "(555) 014-2098",
+    "location": "Serving local and small businesses",
+    "button": "Send inquiry"
+  },
+  "finalCta": {
+    "title": "Let’s improve the way your business shows up online.",
+    "text": "Book a free call and we will talk through your website, customer contact process, and the highest-value improvement to make first.",
+    "button": "Book a free call"
+  }
+}
