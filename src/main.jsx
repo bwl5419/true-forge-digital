@@ -115,11 +115,8 @@ function Header({ content }) {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <a href="#top" className="group flex items-center gap-3">
+        <a href="#top" className="group flex items-center">
           <LogoMark />
-          <span className="font-display text-base font-semibold tracking-wide text-white">
-            {content.brand.name}
-          </span>
         </a>
 
         <div className="hidden items-center gap-7 lg:flex">
@@ -168,9 +165,16 @@ function Header({ content }) {
 
 function LogoMark() {
   return (
-    <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-cyan/25 bg-cyan/10 shadow-soft">
-      <span className="absolute h-5 w-5 rotate-45 rounded-[5px] border border-cyan/70" />
-      <Building2 className="relative z-10 h-4 w-4 text-cyan" />
+    <span className="flex select-none items-baseline gap-1.5">
+      <span
+        className="font-display text-[1.2rem] font-bold italic leading-none tracking-tight text-white"
+        style={{ fontVariationSettings: "'opsz' 72, 'wght' 700" }}
+      >
+        Forge
+      </span>
+      <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
+        Digital
+      </span>
     </span>
   );
 }
@@ -181,7 +185,10 @@ function Hero({ content }) {
       <Container className="grid items-center gap-14 pb-20 lg:grid-cols-[1.02fr_.98fr] lg:pb-28">
         <div className="reveal">
           <Eyebrow>{content.hero.eyebrow}</Eyebrow>
-          <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[1.04] tracking-normal text-white sm:text-6xl lg:text-7xl">
+          <h1
+            className="mt-6 max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[5.25rem]"
+            style={{ fontVariationSettings: "'opsz' 72, 'wght' 700" }}
+          >
             {content.hero.headline}
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
@@ -193,10 +200,10 @@ function Hero({ content }) {
               {content.hero.secondaryButton}
             </Button>
           </div>
-          <div className="mt-8 grid gap-3 text-sm text-slate-300 sm:grid-cols-3">
+          <div className="mt-8 grid gap-3 text-sm text-slate-400 sm:grid-cols-3">
             {content.hero.trustBullets.map((item) => (
               <div key={item} className="flex items-start gap-2">
-                <Check className="mt-0.5 h-4 w-4 flex-none text-cyan" />
+                <Check className="mt-0.5 h-4 w-4 flex-none text-slate-500" />
                 <span>{item}</span>
               </div>
             ))}
@@ -214,7 +221,7 @@ function Hero({ content }) {
 function PhotoStory({ content }) {
   return (
     <div className="relative mx-auto max-w-xl">
-      <div className="absolute -inset-5 rounded-[2rem] bg-cyan/10 blur-3xl" />
+      <div className="absolute -inset-5 rounded-[2rem] bg-white/[0.04] blur-3xl" />
       <div className="relative overflow-hidden rounded-[1.65rem] border border-white/12 bg-white/[0.055] shadow-card">
         <img
           src={content.photos.hero}
@@ -224,7 +231,7 @@ function PhotoStory({ content }) {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/24 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
           <div className="rounded-2xl border border-white/14 bg-ink/74 p-5 backdrop-blur-md">
-            <p className="font-display text-xl font-semibold text-white">
+            <p className="font-display text-xl font-bold text-white" style={{ fontVariationSettings: "'opsz' 20, 'wght' 650" }}>
               {content.hero.photoCardTitle}
             </p>
             <p className="mt-2 text-sm leading-6 text-slate-300">
@@ -234,7 +241,7 @@ function PhotoStory({ content }) {
               {content.hero.photoTags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-cyan/20 bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan"
+                  className="rounded-full border border-white/12 bg-white/[0.07] px-3 py-1 text-xs font-medium text-slate-300"
                 >
                   {tag}
                 </span>
@@ -271,14 +278,14 @@ function FeatureCard({ item, index }) {
       style={{ transitionDelay: `${index * 60}ms` }}
       className="group flex min-h-[300px] flex-col rounded-2xl border border-white/10 bg-white/[0.045] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan/28 hover:bg-white/[0.065]"
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.07] text-white/60">
         <Icon size={22} />
       </div>
-      <h3 className="mt-8 font-display text-2xl font-semibold text-white">
+      <h3 className="mt-8 font-display text-2xl font-bold text-white" style={{ fontVariationSettings: "'opsz' 24, 'wght' 650" }}>
         {item.title}
       </h3>
       <p className="mt-4 flex-1 leading-7 text-slate-300">{item.description}</p>
-      <p className="mt-8 text-sm font-semibold text-cyan">{item.footer}</p>
+      <p className="mt-8 text-sm text-slate-500">{item.footer}</p>
     </article>
   );
 }
@@ -302,14 +309,14 @@ function HowItWorks({ content }) {
                 style={{ transitionDelay: `${index * 60}ms` }}
                 className="grid gap-5 rounded-2xl border border-white/10 bg-panel/70 p-6 sm:grid-cols-[auto_1fr]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.07] text-white/60">
                   <Icon size={22} />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                     {step.number}
                   </p>
-                  <h3 className="mt-3 font-display text-2xl font-semibold text-white">
+                  <h3 className="mt-3 font-display text-2xl font-bold text-white" style={{ fontVariationSettings: "'opsz' 24, 'wght' 650" }}>
                     {step.title}
                   </h3>
                   <p className="mt-3 leading-7 text-slate-300">{step.body}</p>
@@ -329,7 +336,7 @@ function Example({ content }) {
       <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_.98fr]">
         <div>
           <Eyebrow>{content.example.eyebrow}</Eyebrow>
-          <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+          <h2 className="mt-5 font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl" style={{ fontVariationSettings: "'opsz' 48, 'wght' 700" }}>
             {content.example.title}
           </h2>
           <p className="mt-6 max-w-2xl leading-8 text-slate-300">
@@ -338,7 +345,7 @@ function Example({ content }) {
           <div className="mt-7 space-y-3">
             {content.example.points.map((point) => (
               <div key={point} className="flex gap-3 text-slate-300">
-                <BadgeCheck className="mt-1 h-5 w-5 flex-none text-cyan" />
+                <BadgeCheck className="mt-1 h-5 w-5 flex-none text-slate-500" />
                 <span>{point}</span>
               </div>
             ))}
@@ -369,13 +376,13 @@ function BeforeAfterCard({ content }) {
             ))}
           </ul>
         </div>
-        <div className="rounded-2xl border border-cyan/20 bg-cyan/10 p-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
+        <div className="rounded-2xl border border-white/14 bg-white/[0.06] p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
             After
           </p>
           <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-200">
             {content.example.after.map((item) => (
-              <li key={item}>- {item}</li>
+              <li key={item}>— {item}</li>
             ))}
           </ul>
         </div>
@@ -404,15 +411,15 @@ function Packages({ content }) {
 function PackageCard({ item }) {
   return (
     <article className="flex min-h-[430px] flex-col rounded-2xl border border-white/10 bg-white/[0.045] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan/28">
-      <p className="text-sm font-semibold text-cyan">{item.label}</p>
-      <h3 className="mt-4 font-display text-2xl font-semibold text-white">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{item.label}</p>
+      <h3 className="mt-4 font-display text-2xl font-bold text-white" style={{ fontVariationSettings: "'opsz' 24, 'wght' 650" }}>
         {item.title}
       </h3>
       <p className="mt-4 leading-7 text-slate-300">{item.description}</p>
       <div className="mt-6 space-y-3">
         {item.features.map((feature) => (
           <div key={feature} className="flex gap-3 text-sm text-slate-300">
-            <Check className="h-5 w-5 flex-none text-cyan" />
+            <Check className="h-5 w-5 flex-none text-slate-500" />
             <span>{feature}</span>
           </div>
         ))}
@@ -437,7 +444,7 @@ function Proof({ content }) {
         </div>
         <div>
           <Eyebrow>{content.proof.eyebrow}</Eyebrow>
-          <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+          <h2 className="mt-5 font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl" style={{ fontVariationSettings: "'opsz' 48, 'wght' 700" }}>
             {content.proof.title}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -448,7 +455,7 @@ function Proof({ content }) {
                   key={item.title}
                   className="rounded-2xl border border-white/10 bg-panel/70 p-5"
                 >
-                  <Icon className="h-6 w-6 text-cyan" />
+                  <Icon className="h-6 w-6 text-slate-400" />
                   <p className="mt-5 font-display font-semibold leading-6 text-white">
                     {item.title}
                   </p>
@@ -488,7 +495,7 @@ function FAQItem({ item }) {
       >
         <span>{item.question}</span>
         <ChevronDown
-          className={`h-5 w-5 flex-none text-cyan transition ${open ? "rotate-180" : ""}`}
+          className={`h-5 w-5 flex-none text-slate-500 transition ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && <p className="px-5 pb-5 leading-7 text-slate-300">{item.answer}</p>}
@@ -498,11 +505,11 @@ function FAQItem({ item }) {
 
 function Contact({ content }) {
   return (
-    <Section id="contact" className="pb-14">
+    <Section id="contact">
       <div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr]">
         <div>
           <Eyebrow>{content.contact.eyebrow}</Eyebrow>
-          <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+          <h2 className="mt-5 font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl" style={{ fontVariationSettings: "'opsz' 48, 'wght' 700" }}>
             {content.contact.title}
           </h2>
           <p className="mt-6 leading-8 text-slate-300">{content.contact.text}</p>
@@ -553,7 +560,7 @@ function Contact({ content }) {
 function ContactLine({ icon: Icon, children }) {
   return (
     <div className="flex items-center gap-3 text-sm text-slate-300">
-      <Icon className="h-4 w-4 text-cyan" />
+      <Icon className="h-4 w-4 text-slate-500" />
       <span>{children}</span>
     </div>
   );
@@ -562,9 +569,9 @@ function ContactLine({ icon: Icon, children }) {
 function FinalCta({ content }) {
   return (
     <Section className="py-14">
-      <div className="relative overflow-hidden rounded-3xl border border-cyan/20 bg-gradient-to-br from-cyan/12 via-white/[0.055] to-slate-900 p-8 text-center shadow-card sm:p-12 lg:p-16">
-        <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-cyan to-transparent" />
-        <h2 className="mx-auto max-w-4xl font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.03] to-slate-900/70 p-8 text-center shadow-card sm:p-12 lg:p-16">
+        <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <h2 className="mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl" style={{ fontVariationSettings: "'opsz' 48, 'wght' 700" }}>
           {content.finalCta.title}
         </h2>
         <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-300">
@@ -580,28 +587,26 @@ function FinalCta({ content }) {
 
 function Footer({ content }) {
   return (
-    <footer className="border-t border-white/10 py-10">
-      <Container className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex items-start gap-3">
+    <footer className="border-t border-white/[0.07] py-12">
+      <Container className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+        <div className="max-w-xs">
           <LogoMark />
-          <div>
-            <p className="font-display font-semibold text-white">
-              {content.brand.name}
-            </p>
-            <p className="mt-2 max-w-md text-sm text-slate-400">
-              {content.brand.tagline}
-            </p>
-          </div>
+          <p className="mt-4 text-sm leading-6 text-slate-500">
+            {content.brand.tagline}
+          </p>
+          <p className="mt-5 text-xs italic text-slate-600">
+            Built for real businesses, by real people.
+          </p>
         </div>
-        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400">
+        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-500 lg:pt-1">
           {content.nav.map((item) => (
-            <a key={item.label} href={item.href} className="hover:text-white">
+            <a key={item.label} href={item.href} className="transition hover:text-slate-300">
               {item.label}
             </a>
           ))}
         </div>
-        <p className="text-sm text-slate-500">
-          © {content.brand.name}. All rights reserved.
+        <p className="text-xs text-slate-600 lg:pt-1">
+          © {new Date().getFullYear()} {content.brand.name}
         </p>
       </Container>
     </footer>
@@ -857,9 +862,20 @@ function Field({ label, type = "text", placeholder, value, onChange }) {
   );
 }
 
+const sectionPadding = {
+  services:   "py-16 sm:py-22",
+  process:    "py-20 sm:py-28",
+  example:    "py-14 sm:py-20",
+  packages:   "py-20 sm:py-26",
+  proof:      "py-16 sm:py-24",
+  faq:        "py-18 sm:py-24",
+  contact:    "pb-14",
+};
+
 function Section({ id, children, className = "" }) {
+  const pad = sectionPadding[id] ?? "py-20 sm:py-24";
   return (
-    <section id={id} className={`scroll-mt-24 py-20 sm:py-24 ${className}`}>
+    <section id={id} className={`scroll-mt-24 ${pad} ${className}`}>
       <Container>{children}</Container>
     </section>
   );
@@ -870,7 +886,7 @@ function SectionHeader({ eyebrow, title, text, align = "center" }) {
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-xl"}>
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+      <h2 className="mt-5 font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl" style={{ fontVariationSettings: "'opsz' 48, 'wght' 700" }}>
         {title}
       </h2>
       {text && <p className="mt-5 leading-8 text-slate-300">{text}</p>}
@@ -880,8 +896,8 @@ function SectionHeader({ eyebrow, title, text, align = "center" }) {
 
 function Eyebrow({ children }) {
   return (
-    <p className="inline-flex items-center gap-2 rounded-full border border-cyan/22 bg-cyan/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
-      <Sparkles className="h-3.5 w-3.5" />
+    <p className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.07] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+      <Sparkles className="h-3.5 w-3.5 text-slate-500" />
       {children}
     </p>
   );
